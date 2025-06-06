@@ -1,0 +1,25 @@
+{
+  "name": "odin-message-board",
+  "version": "1.0.0",
+  "description": "My take on https://www.theodinproject.com/lessons/node-path-nodejs-mini-message-board.",
+  "homepage": "https://github.com/Beatstamosi/odin-message-board#readme",
+  "bugs": {
+    "url": "https://github.com/Beatstamosi/odin-message-board/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beatstamosi/odin-message-board.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {}
+}
