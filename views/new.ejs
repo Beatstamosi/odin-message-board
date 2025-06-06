@@ -4,8 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Message</title>
+    <link rel="stylesheet" href="../static/new.css" />
   </head>
   <body>
     <h1>Post new message</h1>
+    <a href="/" class="back"> ← Back to all Messages</a>
+    <div class="container-form">
+      <form method="post" action="/messages/new">
+        <div>
+          <label for="message">Message </label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Hi, I really like chilis!"
+          ></textarea>
+        </div>
+        <div>
+          <label for="user"> Name </label>
+          <input type="text" placeholder="Bob Jones" name="user" id="user" />
+        </div>
+        <button type="submit" class="submit-btn">Post Message</button>
+      </form>
+    </div>
   </body>
 </html>

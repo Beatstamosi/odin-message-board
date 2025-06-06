@@ -1,0 +1,57 @@
+body {
+  padding-left: 50px;
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+}
+
+textarea {
+  height: 100px;
+}
+
+textarea,
+input[type="text"] {
+  padding: 10px;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  background-color: lightcoral;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.submit-btn {
+  background-color: lightblue;
+  font-weight: bold;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
