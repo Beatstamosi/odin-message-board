@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addToMessages } from "../static/messages.js";
+import { messages, addToMessages } from "../static/messages.js";
 
 const messageRouter = Router();
 
@@ -10,6 +10,12 @@ messageRouter.get("/new", (req, res) => {
 messageRouter.post("/new", (req, res) => {
   addToMessages(req.body.message, req.body.user);
   res.redirect("/");
+});
+
+messageRouter.get("/:id", (req, res) => {
+  let id = req.params.id;
+  let message = messages.find((message) => message.id == id);
+  res.render("messageView", { message });
 });
 
 export default messageRouter;

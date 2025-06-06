@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Message Board</title>
+    <link rel="stylesheet" href="../static/index.css" />
+  </head>
+  <body>
+    <h1>Mini Message Board</h1>
+    <a href="/" class="back"> ← Back to all Messages</a>
+    <div class="container-messages">
+      <div class="message">
+        <p class="text"><%= message.text %></p>
+        <p class="user">By: <%= message.user %></p>
+        <p class="date">
+          <%= message.added.toLocaleString('en-US', { weekday: 'short', year:
+          'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:
+          '2-digit' }) %>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
