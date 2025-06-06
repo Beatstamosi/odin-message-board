@@ -10,6 +10,8 @@ const __dirname = dirname(__filename);
 
 const app = express();
 
+app.use("/static", express.static(path.join(__dirname, "static")));
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 

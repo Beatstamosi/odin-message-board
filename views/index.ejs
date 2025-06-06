@@ -3,7 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
+    <title>Mini Message Board</title>
+    <link rel="stylesheet" href="../static/index.css" />
   </head>
-  <body></body>
+  <body>
+    <h1><%= title %></h1>
+    <div class="container-messages">
+      <% messages.forEach((message) => { %>
+      <div class="message">
+        <p class="text"><%= message.text %></p>
+        <p class="user">By: <%= message.user %></p>
+        <p class="date">
+          <%= message.added.toLocaleString('en-US', { weekday: 'short', year:
+          'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:
+          '2-digit' }) %>
+        </p>
+      </div>
+
+      <% }); %>
+    </div>
+  </body>
 </html>
