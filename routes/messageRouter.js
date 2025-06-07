@@ -1,21 +1,16 @@
 import { Router } from "express";
-import { messages, addToMessages } from "../static/messages.js";
+import {
+  renderForm,
+  postForm,
+  displayMessage,
+} from "../controllers/messageController.js";
 
 const messageRouter = Router();
 
-messageRouter.get("/new", (req, res) => {
-  res.render("new");
-});
+messageRouter.get("/new", renderForm);
 
-messageRouter.post("/new", (req, res) => {
-  addToMessages(req.body.message, req.body.user);
-  res.redirect("/");
-});
+messageRouter.post("/new", postForm);
 
-messageRouter.get("/:id", (req, res) => {
-  let id = req.params.id;
-  let message = messages.find((message) => message.id == id);
-  res.render("messageView", { message });
-});
+messageRouter.get("/:id", displayMessage);
 
 export default messageRouter;
