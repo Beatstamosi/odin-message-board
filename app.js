@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 import indexRouter from "./routes/indexRouter.js";
 import messageRouter from "./routes/messageRouter.js";
+import "dotenv/config";
 
 // give access to __dirname
 const __filename = fileURLToPath(import.meta.url);

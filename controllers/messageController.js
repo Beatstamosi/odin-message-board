@@ -1,16 +1,17 @@
-import { messages, addToMessages } from "../static/messages.js";
+import { getMessages, addMessage } from "../db/queries.js";
 
 function renderForm(req, res) {
   res.render("new");
 }
 
-function postForm(req, res) {
-  addToMessages(req.body.message, req.body.user);
+async function postForm(req, res) {
+  await addMessage(req.body.message, req.body.user);
   res.redirect("/");
 }
 
-function displayMessage(req, res) {
+async function displayMessage(req, res) {
   let id = req.params.id;
+  let messages = await getMessages();
   let message = messages.find((message) => message.id == id);
   res.render("messageView", { message });
 }

@@ -14,7 +14,7 @@
       <a href="/messages/<%= message.id %>">
         <div class="message">
           <p class="text"><%= message.text %></p>
-          <p class="user">By: <%= message.user %></p>
+          <p class="user">By: <%= message.username %></p>
           <p class="date">
             <%= message.added.toLocaleString('en-US', { weekday: 'short', year:
             'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:

@@ -1,6 +1,7 @@
-import { messages } from "../static/messages.js";
+import { getMessages } from "../db/queries.js";
 
-function renderIndex(req, res) {
+async function renderIndex(req, res) {
+  let messages = await getMessages();
   res.render("index", { messages });
 }
 
